@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: on-chain-game-scoreboard
+            expected-sender: STN6061J8AH8STNWHYX4B07532X1H543S40BJAF9
+            cost: 5520
+            path: "contracts\\on-chain-game-scoreboard.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
